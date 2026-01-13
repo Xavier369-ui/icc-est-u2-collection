@@ -5,9 +5,9 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Sets {
+import models.Person;
 
-    
+public class Sets {
 
     public Sets(){
 
@@ -52,8 +52,47 @@ public class Sets {
 
     }
 
-    public void construirTreeSetConComparador(){
+    public Set<String> construirTreeSetConComparador(){
+        Set<String> treeSet = new TreeSet<>(
+            (pal1,pal2) -> pal1.compareToIgnoreCase(pal2));
+        treeSet.add("D");
+        treeSet.add("A");
+        treeSet.add("E");
+        treeSet.add("I");
+        treeSet.add("O");
+        treeSet.add("B");
+        treeSet.add("a");
+        return treeSet;
 
+    }
+    public Set<Person> personTreeSet(){
+        
+        Set<Person> treeSetPerson = new TreeSet<>();
+        /* 
+        (p1, p2) -> {
+            int cmp = p1.getName().compareToIgnoreCase(p2.getName());
+            if (cmp == 0) {
+                return Integer.compare(p2.getAge(), p1.getAge());
+            }
+            return cmp;
+            }
+        );
+        */
+
+        treeSetPerson.add(new Person("Carlos", 27));
+        treeSetPerson.add(new Person("Ana", 30));
+        treeSetPerson.add(new Person("Luis", 18));
+        treeSetPerson.add(new Person("Ana", 20));
+        treeSetPerson.add(new Person("Andres", 23));
+        treeSetPerson.add(new Person("Luis", 18));
+        return treeSetPerson;
+    
+        /* 
+        Set<Person> treeSetPerson = new TreeSet<>(
+            (p1, p2) -> Integer.compare(p1.getAge(), p2.getAge())
+        );
+        */     
+        
     }
     
 }
