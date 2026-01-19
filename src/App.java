@@ -1,15 +1,23 @@
+/* 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+*/
+//import Controllers.MaquinaController;
+//import Structures.Sets.Sets;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-import Controllers.MaquinaController;
-import Structures.Sets.Sets;
 import Structures.maps.Ejercicios;
+/* 
 import Structures.maps.Maps;
 import models.Maquina;
 import models.Node;
 import models.Person;
+*/
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -152,7 +160,31 @@ public class App {
     */
    public static void runEjercicios(){
     Ejercicios ejerciciosMaps  = new Ejercicios();
-    ejerciciosMaps.contarDuplicados(null);
+    //ejerciciosMaps.contarDuplicados(null);
+    List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+                21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,18, 19, 20,
+                11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+    System.out.println(ejerciciosMaps.contarDuplicados(list));
+    List<Integer> lista = Arrays.asList(
+        4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
+        7, 3, 8, 9, 6, 7, 10
+    );
+    System.out.println(ejerciciosMaps.noRepetir(lista));
+
+    List<String[]> entradas = List.of(
+        new String[]{"Ana", "80"},
+        new String[]{"Luis", "90"},
+        new String[]{"Carlos", "70"},
+        new String[]{"Ana", "85"},
+        new String[]{"Sofia", "95"},
+        new String[]{"Luis", "88"},
+        new String[]{"Pedro", "60"},
+        new String[]{"Maria", "75"}
+    );
+    System.out.println(ejerciciosMaps.ranking(entradas));
 
    }
 }
