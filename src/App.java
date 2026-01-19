@@ -1,9 +1,12 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import Controllers.MaquinaController;
 import Structures.Sets.Sets;
+import Structures.maps.Ejercicios;
+import Structures.maps.Maps;
 import models.Maquina;
 import models.Node;
 import models.Person;
@@ -11,6 +14,7 @@ import models.Person;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Estudiante: Xavier Fajardo");
+        /* 
         Sets setsClase = new Sets();
         Set<String> hashSet = setsClase.construirHashSet();
         System.out.println(hashSet);
@@ -46,9 +50,14 @@ public class App {
         System.out.println(treePersons);
 
         runMaquina();
+        */
+        
+        //runMaps();
+        runEjercicios();
 
         
     }
+    /* 
     public static void runMaquina(){
         List<Maquina> maquinas = crearMaquinas();
         MaquinaController controller = new MaquinaController();
@@ -59,6 +68,30 @@ public class App {
         System.out.println(maquinas.size());
 
     }
+    
+
+    public static void runMaps(){
+        Maps maps = new Maps();
+        /* 
+        Map<String, Integer> hashMap = maps.construirHashMap();
+        System.out.println(hashMap);
+        Map<String, Integer> linkedHashMap = maps.construirlinkedHashMap();
+        System.out.println(linkedHashMap);
+        Map<String, Integer> treeMap = maps.construirTreeMap();
+        System.out.println(treeMap);
+        Map<Person, Integer> personIntegerMap = maps.personTreeMap();
+        System.out.println(personIntegerMap);
+        maps.printFiler(personIntegerMap);
+        
+        Map<Integer, Person> treeHashMap = maps.construirTreeHashMap();
+        System.out.println(treeHashMap);
+    
+
+
+    }
+    */
+
+    /* 
 
     static List<Maquina> crearMaquinas() {
 
@@ -116,4 +149,10 @@ public class App {
         return maquinas;
 
     }
+    */
+   public static void runEjercicios(){
+    Ejercicios ejerciciosMaps  = new Ejercicios();
+    ejerciciosMaps.contarDuplicados(null);
+
+   }
 }
