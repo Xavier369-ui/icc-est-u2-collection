@@ -4,11 +4,12 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Ejercicios {
 
     public Map<Integer, Integer> contarDuplicados(List<Integer> lista) {
-        Map<Integer, Integer> conteo = new HashMap<>();
+        Map<Integer, Integer> conteo = new TreeMap<>();
 
         for(Integer num : lista){
             conteo.put(num,conteo.getOrDefault(num, 0) + 1);
@@ -33,7 +34,7 @@ public class Ejercicios {
         // No ordenar la lista
         //
         // Complejidad O(N)
-        Map<Integer, Integer> conteo = new HashMap<>();
+        Map<Integer, Integer> conteo = new LinkedHashMap<>();
         for(Integer num : lista){
             conteo.put(num, conteo.getOrDefault(num, 0) + 1);
         }
@@ -62,7 +63,7 @@ public class Ejercicios {
         // Usar Map y lógica de comparación
         //
         // Mantener solo el mayor puntaje por jugador
-        // esta en al app
+       
         Map<String, Integer> mapa = new HashMap<>();
         for (String[] entrada : entradas) {
             String nombre = entrada[0];
@@ -80,7 +81,7 @@ public class Ejercicios {
         
     }
 
-    public Map<String, Integer> maxPorGrupo(Map<String, Integer> datos) {
+    public Map<String, Integer> maximoPorGrupo(Map<String, Integer> datos) {
         Map<String, Integer> maximos = new HashMap<>();
         for (Map.Entry<String, Integer> entry : datos.entrySet()) {
             String carrera = entry.getKey().split("-")[0];

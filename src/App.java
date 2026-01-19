@@ -186,5 +186,15 @@ public class App {
     );
     System.out.println(ejerciciosMaps.ranking(entradas));
 
+    Map<String, Integer> datos = new HashMap<>();
+        datos.put("Computacion-Ana", 85);
+        datos.put("Computacion-Luis", 92);
+        datos.put("Electronica-Carlos", 78);
+        datos.put("Electronica-Maria", 88);
+        datos.put("Computacion-Pedro", 90);
+        datos.put("Mecanica-Juan", 80);
+        datos.put("Mecanica-Sofia", 95);
+        System.out.println(ejerciciosMaps.maximoPorGrupo(datos));
+
    }
 }
